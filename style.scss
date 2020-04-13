@@ -1,0 +1,36 @@
+// Colors
+$desaturated-dark-cyan: hsl(180, 29%, 50%);
+$light-grayish-cyan: hsl(180, 52%, 96%);
+$grayish-cyan: hsl(180, 31%, 95%);
+$dark-grayish-cyan: hsl(180, 8%, 52%);
+$very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+
+$desktop-bp: 1440px;
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.header-site {
+  background-image: url('images/bg-header-mobile.svg');
+  background-color: $desaturated-dark-cyan;
+  height: 156px;
+
+  @media screen and (min-width: $desktop-bp){
+    background-image: url('images/bg-header-desktop.svg');
+  }
+}
+
+.main-site {
+  background-color: $light-grayish-cyan;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
