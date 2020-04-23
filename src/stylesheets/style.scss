@@ -4,11 +4,21 @@ $light-grayish-cyan: hsl(180, 52%, 96%);
 $grayish-cyan: hsl(180, 31%, 95%);
 $dark-grayish-cyan: hsl(180, 8%, 52%);
 $very-dark-grayish-cyan: hsl(180, 14%, 20%);
+$white-color: #ffffff;
 
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+$primary-font: 'Spartan', sans-serif;
 
+// Breakpoint
 $desktop-bp: 1440px;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
+  font-family: $primary-font;
   margin: 0;
 }
 
@@ -29,14 +39,122 @@ img {
 
 .main-site {
   background-color: $light-grayish-cyan;
+  padding: 24px;
 }
-
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
 
 .job__list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
+.job__card {
+  background-color: $white-color;
+  border-radius: 4px;
+  box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+  padding: 40px 24px 24px;
+
+  &--evidence {
+    position: relative;
+
+    &:before {
+      background-color: $desaturated-dark-cyan;
+      border-radius: 4px 0 0 4px;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 4px;
+      z-index: 1;
+    }
+  }
+}
+
+.job__company {
+  color: $desaturated-dark-cyan;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.job__position {
+  color: $very-dark-grayish-cyan;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 8px 0 20px;
+}
+
+.job__badge {
+  background-color: $desaturated-dark-cyan;
+  border-radius: 12px;
+  color: $white-color;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 10px;
+  padding: 6px 8px;
+  text-transform: uppercase;
+
+  &--featured {
+    background-color: $very-dark-grayish-cyan;
+  }
+}
+
+.job__date,
+.job__contract,
+.job__location {
+  color: $dark-grayish-cyan;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 12px;
+  margin-right: 24px;
+}
+
+.job__contract {
+  position: relative;
+
+  &:before {
+    background-color: $dark-grayish-cyan;
+    border-radius: 50%;
+    content: '';
+    height: 4px;
+    left: -16px;
+    position: absolute;
+    top: 2px;
+    width: 4px;
+  }
+
+  &:after {
+    background-color: $dark-grayish-cyan;
+    border-radius: 50%;
+    content: '';
+    height: 4px;
+    position: absolute;
+    right: -16px;
+    top: 2px;
+    width: 4px;
+  }
+}
+
+.job__filters {
+  border-top: 1px solid $dark-grayish-cyan;
+  margin-top: 20px;
+  padding-top: 16px;
+}
+
+.filter {
+  background-color: $light-grayish-cyan;
+  border-radius: 4px;
+  color: $desaturated-dark-cyan;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  margin: 0 16px 16px 0;
+  padding: 10px 8px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

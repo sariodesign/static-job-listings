@@ -1,14 +1,14 @@
 <template>
   <ul class="job__list">
 
-    <li class="job__card" v-for="job in jobs" :key=job.id>
+    <li class="job__card" v-bind:class="{ 'job__card--evidence': job.new }" v-for="job in jobs" :key=job.id>
       <div class="job__logo">
         <img :src="job.logo" alt="Company logo">
       </div>
       <div class="job__info">
         <span class="job__company">{{ job.company }}</span>
-        <span class="job__badge"></span>
-        <span class="job__badge"></span>
+        <span v-if="job.new === true" class="job__badge">New!</span>
+        <span v-if="job.featured === true" class="job__badge job__badge--featured">Featured</span>
         <p class="job__position">{{ job.position }}</p>
         <span class="job__date">{{ job.postedAt }}</span>
         <span class="job__contract">{{ job.contract }}</span>

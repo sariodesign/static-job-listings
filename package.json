@@ -28,5 +28,9 @@
   "bugs": {
     "url": "https://github.com/sariodesign/static-job-listings/issues"
   },
+  "staticFiles": {
+    "staticPath": "images",
+    "staticOutDir": "dist/images"
+  },
   "homepage": "https://github.com/sariodesign/static-job-listings#readme"
 }
