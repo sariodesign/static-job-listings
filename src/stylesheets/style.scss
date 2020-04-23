@@ -18,12 +18,12 @@ img {
 }
 
 .header-site {
-  background-image: url('images/bg-header-mobile.svg');
+  background-image: url('../images/bg-header-mobile.svg');
   background-color: $desaturated-dark-cyan;
   height: 156px;
 
   @media screen and (min-width: $desktop-bp){
-    background-image: url('images/bg-header-desktop.svg');
+    background-image: url('../images/bg-header-desktop.svg');
   }
 }
 
@@ -34,3 +34,9 @@ img {
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+.job__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

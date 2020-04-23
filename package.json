@@ -1,0 +1,32 @@
+{
+  "name": "static-job-listings",
+  "version": "1.0.0",
+  "description": "![Design preview for the Job Listings coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "dependencies": {
+    "vue": "^2.6.11",
+    "vue-hot-reload-api": "^2.3.4"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.1.2",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "prod": "parcel build ./src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sariodesign/static-job-listings.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sariodesign/static-job-listings/issues"
+  },
+  "homepage": "https://github.com/sariodesign/static-job-listings#readme"
+}
