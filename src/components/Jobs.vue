@@ -15,7 +15,12 @@
         <span class="job__location">{{ job.location }}</span>
       </div>
       <div class="job__filters">
+        <span class="filter" @click="addFilter(job.role)">{{ job.role }}</span>
+        <span class="filter">{{ job.level }}</span>
         <span v-for="language in job.languages" class="filter" :key=language.id>{{language}}</span>
+        <template v-if="job.tools">
+          <span v-for="tool in job.tools" class="filter" :key=tool.id>{{tool}}</span>
+        </template>
       </div>
     </li>
 
@@ -27,10 +32,15 @@ import json from '../../data.json';
 
 export default {
   name: 'Jobs',
-  data() {
+  data: () => {
     return {
       jobs: json 
     };
   },
+  methods: {
+    addFilter: filter => { 
+      alert('Add '+ filter);
+    }
+  }
 };
 </script>
